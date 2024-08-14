@@ -1,0 +1,37 @@
+\documentclass[12pt,letterpaper, onecolumn]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[lmargin=71pt, tmargin=1.2in]{geometry} 
+\lhead{Leaft Header\\}
+\rhead{Right Header\\}
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\usepackage{tikz}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\begin{document}
+
+\begingroup  
+    \centering
+    \LARGE Transition CPGE\\
+\endgroup
+\rule{\textwidth}{0.4pt}
+\pointsdroppedatright
+\printanswers
+\renewcommand{\solutiontitle}[1]{\noindent\textbf{}\enspace} 
+
+\newcommand{\answer}[1]{\begin{solution} #1 \end{solution}}
+
+\begin{questions}
+
+\section{Chapitre 0 : Outils latex}
+
+\question[1] Calculer 1+1 \circled{0} :
+    
+\answer{La solution est triviale, on a 1+1 = 2.}
+    
+    
+\end{questions}
+\end{document}

@@ -1,6 +1,7 @@
-read pofm_arith_nv2 arith 14 157
-read pofm_arith_nv1 arith 26 32
-read Inequalities inequ 18 217
-read MONT arith 59 314
+read EGMO geomt 53 328
 read Niv_2_Equations_fonctionelles.pdf eqfnc 0 45
-read EGMO geomt 50 328
+read MONT arith 59 314
+read Inequalities inequ 18 217
+read pofm_arith_nv1 arith 26 32
+read pofm_arith_nv2 arith 14 157
+read 169_Func_Equations eqfnc 0 169
