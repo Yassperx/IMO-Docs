@@ -2,8 +2,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[lmargin=71pt, tmargin=1.2in]{geometry} 
-\lhead{Leaft Header\\}
-\rhead{Right Header\\}
+\lhead{Chapitre \thesection\\}
+\rhead{It's a me, yassine \\}
 \thispagestyle{empty}
 \setlength{\parindent}{0pt}
 \usepackage{tikz}
@@ -26,12 +26,45 @@
 
 \begin{questions}
 
-\section{Chapitre 0 : Outils latex}
+\section*{Chapitre 0 : Outils latex}
 
-\question[1] Calculer 1+1 \circled{0} :
+\question*[1] Calculer 1+1 \circled{0} :
     
 \answer{La solution est triviale, on a 1+1 = 2.}
-    
-    
+        
+\newpage
+ 
+ 
+ \section{Chapitre 1 :  Rédaction, modes de raisonnements}
+ \setcounter{question}{0}
+ \question[1] \circled{2} (Somme des cubes des $n$ premiers cubes*) Montrer que : 
+ $$\sum_{k=1}^n k^3  = \left (\frac{n(n+1)}{2} \right)^2$$
+ \answer{
+On pose la propriété $P_n : \displaystyle \sum_{k=1}^n k^3  = \left (\frac{n(n+1)}{2} \right)^2$. \\
+$P_1$ est naturellement vérifiée.
+Supposons que $P_n$ est vraie :
+$$\sum_{k=1}^n k^3  = \left (\frac{n(n+1)}{2} \right)^2$$
+$$\iff  \left (\sum_{k=1}^n k^3 \right)  +(n+1)^3=\frac{n^2(n+1)^2}{4}  + (n+1)^3 = \frac{n^2(n+1)^2}{4}  + (n^3+3n^2+3n+1)$$
+$$\iff  \sum_{k=1}^{n+1} k^3 = \frac{n^2(n^2 + 2n + 1) + 4n^3 +12n^2 + 12n+4)}{4} $$
+$$\iff  \sum_{k=1}^{n+1} k^3=  \frac{n^4 + 2n^3 + n^2 + 4n^3 }{4}$$
+$$\iff  \sum_{k=1}^{n+1} k^3=  \frac{n^4 + 6n^3 + 5n^2 + 12n + 4}{4}$$
+Or, d'après notre propriété, le numérateur vaudrait :  $$ ((n+1)(n+2))^2 = n^4 + 6n^3+ 5n^2 + 12n + 4$$
+D'où la propriété $P_n$ est vraie pour tout $n \in \mathbb{N}.$
+ }
+ 
+\question[1] \circled{2} Montrer que, si $n \in \mathbb{N}$, il existe un entier impair $\lambda_n$ tel que :
+$$5^{2^n} = 1 + \lambda_n2^{n+2}$$
+ 
+ \answer{
+ Soit $P_n : \forall n, n \in \mathbb{N}, \exists \lambda_n : 5^{2^n} = 1 + \lambda_n 2^{n+2}$ .\\
+ Pour $P_1 : $ On a $5^2 = 25 = 1 + (3) \cdot 2^3$. \\
+D'où $\lambda_1 = 3 : $ L'initialisation est vérifiée.
+
+Supposons $P_n$ vraie : 
+ $$5^{2^n} = 1 + \lambda_n 2^{n+2} \iff 5^2 \cdot \left ( 5^{2^n}\right) = 5^2 \cdot \left (1 + \lambda_n 2^{n+2} \right)$$
+ $$\iff 5^{2^{n+1}} = 25 + 25\lambda_n 2^{n+2}$$
+ Donc on aurait $\lambda_{n+1} = 24 + $
+ }
+ 
 \end{questions}
 \end{document}
